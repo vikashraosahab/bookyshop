@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
 
-class WebLayout extends StatelessWidget{
+class WebLayout extends StatefulWidget{ 
+    WebLayout ({ Key ? key}):super(key:key);
    @override 
-    Widget build(BuildContext context) {
-     return Scaffold(
-      appBar:AppBar(
-        backgroundColor:Colors.red,
-        title:const Text("Web")
-      ),
-      body:const Text("Web application")
-     );
-  }
+    WebLayoutState createState()=> WebLayoutState();
+}
+
+class WebLayoutState extends State<WebLayout>{
+   @override
+     Widget build(BuildContext context){
+       return Row(
+            children: [
+              Flexible(
+                flex:2,
+                child:Container(
+                  color:Colors.red,
+                )),
+              Flexible(
+                flex:3,
+                child:Container(
+                color:Colors.yellow,
+              ))
+            ],
+       );
+     }
 }

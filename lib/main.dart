@@ -14,8 +14,12 @@ class MyApp extends StatelessWidget{
   const MyApp({Key ? key}):super(key:key);
    @override
   Widget build(BuildContext context) {
-     return const MaterialApp(
-      home:SplashScreen(),
+     return MaterialApp(
+      theme:ThemeData.dark().copyWith(
+        scaffoldBackgroundColor:Colors.black
+      ),
+      debugShowCheckedModeBanner:false,
+      home:const SplashScreen(),
      );
   }
 }

@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget{
       body:Container(
         color:Colors.red,
         child:ResponsiveLayout(
-          mobileLayout:MobileLayout(),
+          mobileLayout:const MobileLayout(),
            webLayout:WebLayout()
         )
       ),
